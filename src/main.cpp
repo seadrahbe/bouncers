@@ -57,8 +57,6 @@ int main() {
 
     // Sprites and x speeds of bouncers
     // Items with the same index correspond to each other
-    bn::vector<bn::sprite_ptr, MAX_BOUNCERS> sprites = {};
-    bn::vector<bn::fixed, MAX_BOUNCERS> x_speeds = {};
 
     bn::vector<Bouncer, MAX_BOUNCERS> bouncers = {};
 
@@ -74,24 +72,25 @@ int main() {
 
         // for each bouncer
         for(int i = 0; i < bouncers.size(); i++) {
-            bn::sprite_ptr sprite = sprites[i];
+            Bouncer& bouncer = bouncers[i];
+            bn::sprite_ptr sprite = bouncer.sprite;
 
             bn::fixed x = sprite.x();
 
             // Update x position by adding speed
-            x += x_speeds[i];
+            x += bouncer.x_speed;
 
             // If we've gone off the screen on the right
             if(x > MAX_X) {
                 // Snap back to screen and reverse direction
                 x = MAX_X;
-                x_speeds[i] *=-1;
+                bouncer.x_speed *=-1;
             }
             // If we've gone off the screen on the left
             if(x < MIN_X) {
                 // Snap back to screen and reverse direction
                 x = MIN_X;
-                x_speeds[i] *= -1;
+                bouncer.x_speed *= -1;
             }
 
             sprite.set_x(x);
