@@ -16,14 +16,14 @@ YOU MUST BE MAKING FREQUENT COMMITS THROUGHOUT!
 1. Move the updating logic to a member function.
 
 ## Required Homework Steps
-1. Refactor the average function to use the Bouncer class. and uncomment the call to it.
-1. Add a y_speed and change the update member function to make the Bouncer move in two dimensions.
-1. Make the x_speed and y_speed start as random values. Hint: you will need to re-use the same bn::random instance repeatedly to get different random values.
+1. Refactor the average function to use the Bouncer class. and uncomment the call to it. (Fin.)
+1. Add a y_speed and change the update member function to make the Bouncer move in two dimensions. (Fin.)
+1. Make the x_speed and y_speed start as random values. Hint: you will need to re-use the same bn::random instance repeatedly to get different random values. (Fin.)
     
     If all is working well at this point you should see behavior that looks like this:
     
     ![Sample recording of balls bouncing in random directions](./sample.gif)
-1. Choose at least one of the extensions (see below section) or come up with one of your own!
+1. Choose at least one of the extensions (see below section) or come up with one of your own! (Fin. -- made average dot)
 1. Make a GIF of your game.
 1. Create a nice README that describes your game and includes the GIF and a link to the live GitHub pages version.
 1. Submit (see instructions on Canvas).
@@ -34,5 +34,5 @@ YOU MUST BE MAKING FREQUENT COMMITS THROUGHOUT!
 1. Create a different sprite that's more fun and add it to your game.
 1. Add a background. Consider looking at the Butano background example for how to do this.
 1. Make each dot dissapear after a certain amount of time.
-1. Make a different dot that always stays at the average position of all the dots. Re-use exisiting functions well!
+1. Make a different dot that always stays at the average position of all the dots. Re-use exisiting functions well! (x)
 1. Come up with your own idea!
